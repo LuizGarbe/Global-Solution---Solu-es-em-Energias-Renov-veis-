@@ -7,6 +7,7 @@ O objetivo é demonstrar, de forma prática, como a **análise de dados e a simu
 ---
 
 ## ⚙️ Estrutura do Projeto
+
 Gs/
 ├── data/
 │ ├── gerar_dados.py # Script que gera dados simulados de consumo
