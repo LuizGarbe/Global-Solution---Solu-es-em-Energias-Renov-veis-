@@ -1,0 +1,8 @@
+RELATÓRIO DE ESTATÍSTICAS DO CONSUMO
+----------------------------------------
+Média: 0.499 kW
+Mediana: 0.502 kW
+Pico: 0.961 kW
+Mínimo: 0.036 kW
+Desvio Padrão: 0.254
+Total de Amostras: 1440
