@@ -1,76 +1,155 @@
-# 🌱 Global Solution – Soluções em Energias Renováveis e Sustentáveis
+🌱 Global Solution – Soluções em Energias Renováveis e Sustentáveis (SERS)
 
-## 💡 Sobre o Projeto
-Este projeto foi desenvolvido como parte da **Global Solution** do curso de **Ciência da Computação – 2° semestre de 2025**.  
-O objetivo é demonstrar, de forma prática, como a **análise de dados e a simulação IoT** podem contribuir para a eficiência energética em ambientes corporativos, promovendo **sustentabilidade e otimização do consumo**.
+FIAP – Ciência da Computação – 2025
 
 ---
 
-## ⚙️ Estrutura do Projeto
+📘 Sobre o Projeto
 
-Gs/
+Este projeto foi desenvolvido para a Global Solution – SERS 2025.
+O objetivo central é mostrar como dados, análise computacional e IoT podem ser aplicados para monitorar e otimizar o consumo de energia, conectando tecnologia com sustentabilidade e o futuro do trabalho.
+
+A solução utiliza dados simulados para representar um dia completo de consumo energético, analisa padrões importantes (como média, pico, variação e dispersão) e simula sensores IoT realizando leituras em tempo real.
+
+O projeto permite visualizar desperdícios, entender horários de maior demanda e apoiar decisões para reduzir custos e impactos ambientais.
+
+---
+
+🧩 Funcionalidades Implementadas
+✔️ 1. Geração de Dados (Simulação)
+
+Criação automática de 1440 amostras (1 por minuto – 24h).
+Dados representando consumo energético (kW) com variação realista.
+Saída salva como:
+/data/consumo_sample.csv
+
+---
+
+✔️ 2. Análise de Consumo
+
+Cálculo de:
+-> Média
+-> Mediana
+-> Pico (máximo)
+-> Mínimo
+-> Desvio-padrão
+-> Quantidade total de amostras
+-> Gera um arquivo com todas as estatísticas:
+/results/estatisticas.txt
+
+---
+
+✔️ 3. Visualização de Dados
+
+Geração automática de gráficos dentro da pasta /results:
+* Gráfico de Série Temporal → serie_temporal.png
+* Histograma da Distribuição → histograma.png
+* Boxplot (dispersão do consumo) → boxplot.png
+
+---
+
+✔️ 4. Simulação IoT
+
+Simulação de leituras de sensores, gerando valores reais do dataset:
+Saída salva em:
+/results/leituras.txt
+Isso demonstra como sensores monitorariam o consumo em tempo real.
+
+---
+
+📂 Estrutura Completa do Repositório
+
+Global-Solution/
+│
 ├── data/
-│ ├── gerar_dados.py # Script que gera dados simulados de consumo
-│ └── consumo_sample.csv # Dados gerados automaticamente
+│ └── consumo_sample.csv
+│
+├── results/
+│ ├── boxplot.png
+│ ├── estatisticas.txt
+│ ├── histograma.png
+│ ├── leituras.txt
+│ └── serie_temporal.png
 │
 ├── src/
-│ ├── analise_consumo.py # Análise da média e do pico de consumo
-│ └── iot_simulador.py # Simulação de leituras IoT em tempo real
+│ ├── analise_consumo.py
+│ ├── gerar_dados.py
+│ ├── iot_simulador.py
+│ └── relatorio_gerador.py 
 │
-├── docs/ # Documentos e relatórios do projeto
-├── results/ # Resultados e gráficos (opcional)
-└── requirements.txt # Dependências do projeto
+├── requirements.txt
+└── README.md
 
 ---
 
-## 🧠 Tecnologias Utilizadas
-- **Python 3.11**
-- **Pandas**
-- **NumPy**
-- **Time (biblioteca padrão do Python)**
+⚙️ Tecnologias Utilizadas
+
+-> Python 3.11
+-> NumPy
+-> Pandas
+-> Matplotlib
+-> Time
+-> GitHub
 
 ---
 
-## 🚀 Como Executar o Projeto
+🚀 Como Executar o Projeto
 
-1. **Clone o repositório**
-   ```bash
-   git clone https://github.com/SEU_USUARIO/NOME_DO_REPOSITORIO.git
-   
-2. **Instale as dependencias**
-   pip install -r requirements.txt
+1. Instale as dependências:
+pip install -r requirements.txt
 
-3. **Gere os dados Simulados**
-   python data/gerar_dados.py
+2. Gere os dados de consumo:
+python src/gerar_dados.py
 
-4. **Execute a análise de Consumo**
-   python src/analise_consumo.py
+3. Faça a análise dos dados:
+python src/analise_consumo.py
 
-5. **Simule as leituras IOT**
-   python src/iot_simulador.py
+4. Gere gráficos e arquivos de resultados:
+python src/relatorio_gerador.py
+
+5. Simule sensores IoT:
+python src/iot_simulador.py
+Todos os resultados aparecerão automaticamente na pasta:
+📁 /results
+
+
+---
 
 📊 Resultados Obtidos
-Média de consumo aproximada: 0.49 kW
-Pico de consumo: 0.91 kW
-Simulação IoT exibiu leituras entre 0.5 e 1.1 kW
-Esses resultados representam um cenário hipotético de consumo energético diário, com base em uma curva de variação sinusoidal e ruído aleatório, simulando o comportamento real de um sistema elétrico em operação contínua.
 
-🌎 Impacto e Conexão com o Futuro do Trabalho
-A proposta mostra como sistemas baseados em dados e IoT podem apoiar ambientes de trabalho sustentáveis, possibilitando:
-Monitoramento contínuo de energia;
-Identificação de picos e desperdícios;
-Decisões mais inteligentes para economia e sustentabilidade.
+Com base nos dados simulados, o projeto conseguiu identificar:
+Consumo médio aproximado: ~0.49 kW
+Pico de consumo: ~0.91 kW
+Variação moderada ao longo do dia
+Leituras IoT entre 0.50 e 1.10 kW
+Os gráficos mostram claramente a distribuição do consumo e sua evolução ao longo de um dia.
+
+---
+
+🔮 Impacto e Conexão com o Futuro do Trabalho
+
+A proposta mostra como ferramentas digitais podem:
+* Monitorar ambientes corporativos de forma inteligente
+* Reduzir desperdício energético
+* Automatizar análise e tomada de decisão
+* Criar ambientes sustentáveis e eficientes
+* Aplicar IoT em situações reais de trabalho
+* O uso de dados e automação já é uma das bases do trabalho moderno — e este projeto demonstra o primeiro passo para um sistema real de eficiência energética.
+
+---
 
 👨‍💻 Autores
-------
-------
-------
-FIAP / SENAC – Ciência da Computação
-2025
+Luiz Eduardo
+Eduardo Luiz
+Emanuel Nabarrete
+FIAP – Ciência da Computação – 2025
+
+---
 
 🎥 Vídeo Explicativo
-🔗
+🔗 (Insira aqui o link do vídeo “Não listado” do YouTube)
+
+---
 
 🧾 Licença
-
-Este projeto foi desenvolvido para fins acadêmicos e educacionais.
+Este projeto foi desenvolvido exclusivamente para fins acadêmicos e educacionais.
