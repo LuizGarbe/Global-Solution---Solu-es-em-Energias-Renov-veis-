@@ -139,10 +139,11 @@ A proposta mostra como ferramentas digitais podem:
 ---
 
 👨‍💻 Autores
-Luiz Eduardo
-Eduardo Luiz
-Emanuel Nabarrete
-FIAP – Ciência da Computação – 2025
+- Luiz Eduardo
+- Eduardo Luiz
+- Emanuel Nabarrete
+
+#### FIAP – Ciência da Computação – 2025
 
 ---
 
