@@ -146,10 +146,5 @@ FIAP – Ciência da Computação – 2025
 
 ---
 
-🎥 Vídeo Explicativo
-🔗 (Insira aqui o link do vídeo “Não listado” do YouTube)
-
----
-
 🧾 Licença
 Este projeto foi desenvolvido exclusivamente para fins acadêmicos e educacionais.
